@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>digital forever.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="homepage.html" class="logo">digital forever.</a>
+        <ul>
+            <li><a href="rants.html">rants</a></li>
+            <li><a href="fashion.html">fashion</a></li>
+            <li><a href="music.html">music</a></li>
+            <li><a href="gallery.html">gallery</a></li>
+        </ul>
+    </nav>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rants - digital forever.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>rants</h1>
+        <input type="text" id="searchBar" placeholder="Search rants..." onkeyup="searchRants()">
+    </header>
+
+    <main id="rants-container">
+        <article class="rant">
+            <h2>instagram</h2>
+            <p class="date">february 24, 2025</p>
+            <p class="content"> I miss Instagram spam 2018-2019 it was so much fun. Users like, Nateclips would do Instagram raids where you would send in a live, and the host would tell you what to say. For a pg-13 example, "congrats on failing a test". Then, the host ends the live. finally, everyone goes and spams the live sent in. Having to explain it makes it sound so lame now. Time really is a liar. Maybe I don't miss it, am just tired of how aware everyone is of their public image. All your pictures need to be aesthetically pleasing and matching while also, being mysterious and not trying too hard. You can see the people who put in so much effort (I'm talking to you model, DJ, clothing brand, and producer guys) but no real hate too them; everyone cares about image. </p>
+        </article>
+
+        <article class="rant">
+            <h2>coming...</h2>
+            <p class="date">February xx, 2025</p>
+            <p class="content">soon.</p>
+        </article>
+
+        <article class="rant">
+            <h2>coming...</h2>
+            <p class="date">February xx, 2025</p>
+            <p class="content">soon.</p>
+        </article>
+    </main>
+
+    <script>
+        function searchRants() {
+            let input = document.getElementById("searchBar").value.toLowerCase();
+            let rants = document.querySelectorAll(".rant");
+
+            rants.forEach(rant => {
+                let title = rant.querySelector("h2").innerText.toLowerCase();
+                let content = rant.querySelector(".content").innerText.toLowerCase();
+                
+                if (title.includes(input) || content.includes(input)) {
+                    rant.style.display = "block";
+                } else {
+                    rant.style.display = "none";
+                }
+            });
+        }
+    </script>
+<!-- Footer -->
+<footer>
+    <div class="footer-links">
+        <a href="contact.html">contact</a>
+        <a href="https://instagram.com/ewwjoi" target="_blank">instagram</a>
+        <a href="https://last.fm/user/nickiminajj" target="_blank">last.fm</a>
+    </div>
+    <div class="rights-reserved">
+        <p>&copy; 2025 ewwjoi. All Rights Reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
